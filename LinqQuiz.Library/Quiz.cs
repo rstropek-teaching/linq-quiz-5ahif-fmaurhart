@@ -59,6 +59,7 @@ namespace LinqQuiz.Library
                 List<int> list = new List<int>();
                 for (int i = 1; i < exclusiveUpperLimit; i++)
                 {
+                    // Here it would be better to use `checked(...)` (=C# keyword)
                 if (i * i > Int32.MaxValue/2)
                     throw new OverflowException();
                     list.Add(i * i);
